@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scroll User Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- style sheets -->
+    <!-- <link href="bootstrap.css" rel="stylesheet"> check out these two sheets in other file -->
+    <link href="../roark/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../roark/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../roark/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link href="logincss1.css" rel="stylesheet">
+
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    body {
+    	padding-top: 20px;
+      	padding-bottom: 40px;
+      	color: #5a5a5a;
+    }
+    /* Navbar */
+    .header-box {
+        float:left;
+        height: 45px;
+        text-align: center;
+    }
+
+    #header {    
+        display:table;
+        margin-right: 25px;
+    }
+
+    #header h3 {
+        display:table-cell;
+        vertical-align: middle;
+    }
+    #links {
+        display:table;
+    }
+    #links ul {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    #links ul li {
+        display: inline-block;
+    }
+    #search {
+        line-height: 48px;
+        vertical-align: middle;
+    }
+    .input-append button.add-on {
+        height: inherit !important;
+     
+        vertical-align: middle;
+    }
+    .navlogo {
+        padding-right: 5px;
+        text-decoration: none;
+        color: #4c4c4c;
+    }
+    #buttons {
+        line-height: 45px;
+        vertical-align: middle;
+        float:right;
+    }
+    .nav-pills > li > a {
+        border-top-width: 2.5px;
+        border-top-style: solid;
+        border-top-color: transparent;
+
+        border-bottom-width: 2.5px;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+    }
+    .nav-pills > .active > a,
+    .nav-pills > .active > a:hover,
+    .nav-pills > li > a:hover {
+        text-decoration: none;
+        /* font-weight: bold; */
+        border-radius: 0px;
+
+        border-top-width: 2.5px;
+        border-top-style: solid;
+        border-top-color: transparent;
+
+        border-bottom-width: 2.5px;
+        border-bottom-style: solid;
+        border-bottom-color: #000000;
+
+        color: #000000 !important;
+        background-color: transparent !important;
+        /* text-decoration: underline; */
+    }
+    .nav-pills > li > a {
+        color: #0d0d0d;
+        border-radius:0px;
+    }
+    /* Main content */
+    .mainwrapper {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    /* Footer */
+    .sociallogo {
+        margin-right: 10px;
+    }
+    .sl { 
+        text-decoration: none;
+        color: #4c4c4c; /* Delete this line to have have blue color and hover over effect */
+    }
+    ul.nav.nav-pills {
+        padding-left: 11px;
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  	</head>
+
+  	<body>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="container">
+        
+
+  <div class="navbar">
+	<!-- <div class="navbar-inner"> -->
+		
+			
+				<ul class="nav pull-right">
+                  	
+		<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+							<form method="post" action="login" accept-charset="UTF-8">
+								<input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+								<input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+								<input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+								<label class="string optional" for="user_remember_me"> Remember me</label>
+								<a href="url">Forgot my password</a>
+								<input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
+							</form>
+						</div>
+					</li>
+				</ul>
+			
+			<!--/.nav-collapse -->
+		
+		<!--/.container-fluid -->
+	<!-- </div>
+	/.navbar-inner -->
+</div>
+<!--/.navbar -->
+
+<script>
+$(document).ready(function()
+{
+  //Handles menu drop down
+  $('.dropdown-menu').find('form').click(function (e) {
+        e.stopPropagation();
+        });
+  });
+</script>
+  		
+
+    <!-- ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  	</div> <!--mainwrapper -->
+
+    <div class="container marketing">
+    <!-- <hr class="footerdivider"> -->
+    <hr>
+	<!-- beginning of new footer -->
+    <footer>   
+        <p class="pull-right"><a href="#">About</a> &middot; <a href="#">The team</a> &middot; <a href="#">Contact</a> &middot; <a href="#">Terms of use</a> &middot; <a href="#">Privacy & Security</a> &middot; &copy; 2013 Scroll, Inc. All rights reserved.</p>  
+        <span class="sociallogo"><a href="http://twitter.com/BragInteractive"><i class="icon-twitter icon-2x sl"></i></a></span>
+        <span class="sociallogo"><a href="http://facebook.com/BragInteractive"><i class="icon-facebook icon-2x sl"></i></a></span>
+        <span class="sociallogo"><a href="http://facebook.com/BragInteractive"><i class="icon-google-plus-sign icon-2x sl"></i></a></span>
+    </footer>
+
+    </div><!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../roark/bootstrap/js/jquery.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-button.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="../roark/bootstrap/js/bootstrap-typeahead.js"></script>
+    <script>
+
+    </script>
+  </body>
+</html>
